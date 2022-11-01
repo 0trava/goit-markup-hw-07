@@ -55,6 +55,10 @@ li {
   list-style: none;
 }
 
+a  {
+  text-decoration: none;
+}
+
 
 .container{
   width: 1200px;
@@ -94,18 +98,18 @@ li {
     align-items: center;  
   }
 
-  .sity-nav{
+  .header-nav__pagination{
       display: flex;
       margin-left: 93px;
       margin-right: 318px;
   }
 
-  .sity-nav .item + .item {
+  .header-nav__pagination .header-nav__item + .header-nav__item {
       margin-left: 50px;
   }
 
 
-  .sity-nav .link {
+  .header-nav__pagination .header-nav__link {
       display: block;
       padding-top: 32px;
       padding-bottom: 32px;
@@ -121,19 +125,19 @@ li {
       transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .link:hover, .link:focus{
+  .header-nav__link:hover, .header-nav__link:focus{
       color: var(--accent-color);
   }
 
-  .sity-nav .open {
+  .header-nav__pagination .header-nav--open {
       color: var(--accent-color);
 
   }
 
-  .link{
+  .header-nav__link{
     position: relative;
   }
-  .open::after{
+  .header-nav--open::after{
     content: "";
     position: absolute;
     width: 100%;
@@ -147,24 +151,24 @@ li {
 
 /* Контакти */
 
-.adr-nav{
+.header-nav__adr{
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-  .adr-nav li + li {
+  .header-nav__adr li + li {
     margin-left: 30px;
 
   }
 
-  .nav-mail, .nav-tel {
+  .header-nav__item {
     display: inline-flex;
     align-items: center;
     justify-content: center;
   }
 
-      .mail, .tel {
+  .header-nav__link {
       display: inline-flex;    
       color: var(--title-text-color); 
       fill: var(--title-text-color); 
@@ -182,24 +186,24 @@ li {
   }
 
 
-  .icon-envelope, .icon-smartphone{
+  .header-nav__icon{
     margin-right: 10px;
   }
 
-  .mail:hover, .tel:hover, .adr:hover,
-  .mail:focus, .tel:focus, .adr:focus {
+  .header-nav__link:hover, .header-nav__link:focus, 
+  .adr:focus, .adr:hover {
     color: var(--accent-color);
     fill: var(--accent-color);
   }
 
-  .line{
+  .header-nav--line{
     border: 1px solid var(--border);
   }
 /* --------main index-------- */
 
 /* Головний банер */
 
-  .hero{
+  .section-hero{
     max-width: 1600px;
     height: 600px;
     margin-left: auto;
@@ -213,13 +217,13 @@ li {
     background-color: var(--second-background);
   }
 
-  .hero-center{
+  .section-hero--center{
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
   }
 
-  .hero-center > h1 {
+  .section-hero--center > h1 {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -228,15 +232,15 @@ li {
     color: var(--second-text-color);
   }
 
-  .hero-title{
+  .section-hero__title{
     margin-bottom: 30px;
   }
 
 
 
-/* Кнопка на сторінці Студія */
+/* Кнопка section-hero */
 
-  .button {
+  .section-hero__button {
 
   cursor: pointer;
   min-width: 216px;
@@ -260,32 +264,32 @@ li {
   }
 
 
-  .button:hover, .button:focus{
+  .section-hero__button:hover, .section-hero__button:focus{
     background: var(--button-background);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   }
 
 
 /* Секція - Головні переваги */
-  .benef{
+  .section-benefits{
     padding-top: 94px;
     padding-bottom: 94px;
     
   }
-  .benefits{
+  .section-benefits__list{
     display: flex;
 
   }
 
-  .benefits > .item{
+  .section-benefits__list > .section-benefits__item{
     width: 270px;
   }
 
-  .benefits .item +.item{
+  .section-benefits__list .section-benefits__item +.section-benefits__item{
     margin-left: 30px;
   }
 
-  .benefits-img{
+  .section-benefits__img{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -298,7 +302,7 @@ li {
 
   }
 
-  .title{
+  .section-benefits__title{
     margin-top: 0;
     margin-bottom: 10px;
     font-weight: 700;
@@ -308,7 +312,7 @@ li {
     text-transform: uppercase;
   }
 
-  .text {
+  .section-benefits__text {
     margin: 0;
     color: var(--title-text-color);
     font-size: 14px;
@@ -318,7 +322,7 @@ li {
   
 /* Секція - Чим ми займаємося */
 
-  .caption {
+  .section-caption__title, .section-teem__title, .section-client__title {
     margin-bottom: 50px;
 
     text-align: center;
@@ -328,25 +332,25 @@ li {
     letter-spacing: 0.03em;
   }
 
-  .caption-section{
+  .section-caption{
     padding-bottom: 94px;
   }
 
 
-  .caption-img{
+  .section-caption__img{
     display: flex;
 
   }
 
-  .caption-img .item + .item{
+  .section-caption__img .section-caption__item + .section-caption__item{
     margin-left: 30px;
   }
 
-.cap-box{
+.section-caption__box{
   position: relative;
 }
 
-.cap-overlay{
+.section-caption--overlay{
   position: absolute;
   left: 50%;
   bottom: 27px;
@@ -361,7 +365,7 @@ li {
 
 }
 
-.cap-box::before {
+.section-caption__box::before {
   position: absolute;
   width: 100%;
   height: 70px;
@@ -369,21 +373,19 @@ li {
   bottom: 0;
  
   background: var(--cap-box-before);
-
-
 }
 
 
 
 /* Секція - Наша команда */
 
-  .our-teem {
+  .section-teem {
     background: var(--third-background);
     padding-top: 94px;
     padding-bottom: 94px;
   }
 
-  .card-set{
+  .section-teem__list{
     display: flex;
     gap: 30px;
     margin-bottom: 0;
@@ -391,18 +393,18 @@ li {
   
   
   }
-  .card-set .item {
+  .section-teem__list .section-teem__item {
    background-color: var(--second-text-color); 
    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
    border-radius: 0px 0px 4px 4px;
   }
 
-  .paragraf{
+  .section-teem__blok{
     margin-bottom: 30px;
     margin-top: 30px;
   }
 
-  .lead {
+  .section-teem__lead {
 
 
     font-size: 16px;
@@ -412,7 +414,7 @@ li {
     letter-spacing: 0.03em;
   }
 
-  .post {
+  .section-teem__post {
     margin-top: 10px;
     margin-bottom: 16px;
     font-size: 16px;
@@ -425,12 +427,12 @@ li {
 
   /* БЛОК соц. мереж*/
 
-  .block-icon{
+  .block-socials{
     display: inline-flex;
     margin-left: 32px;
   }
 
-  .icon{
+  .block-socials__icon{
     display: flex;
     height: 44px;
     width: 44px;
@@ -443,38 +445,38 @@ li {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .block-icon .icon+.icon{
+  .block-socials .block-socials__icon +.block-socials__icon{
     margin-left: 10px
   }
 
-  .icon:hover, .icon:focus{
+  .block-socials__icon:hover, .block-socials__icon:focus{
     background-color: var(--accent-color);
     fill: var(--second-text-color);
   }
 
 /* Постійні клієнти */
 
-.client > .container {
+.section-client > .container {
   display: block;
   justify-content: center;
   /* background-color: var(--primary-background); */
 }
 
-.client {
+.section-client {
   padding-bottom: 94px;
   padding-top: 94px;
 }
 
 
-.client-logo{
+.section-client__logo{
   display: inline-flex;
 }
 
-.client-logo li + li{
+.section-client__logo li + li{
  margin-left: 30px ;
 }
 
-.logo-icon{
+.section-client__icon{
   display: flex;
   width: 170px;
   height: 92px;
@@ -487,7 +489,7 @@ li {
   border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.logo-icon:hover, .logo-icon:focus{
+.section-client__icon:hover, .section-client__icon:focus{
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
@@ -503,7 +505,7 @@ li {
     display: flex;
   }
 
-  .footer-nav-mail, .footer-nav-tel, .footer-adr  {
+  .footer__item {
     color: var(--footer-text-color); 
     text-decoration: none;  
     font-style: normal;
@@ -515,7 +517,7 @@ li {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .footer-adr {
+  .footer__item--white {
     margin: 0;
     padding: 0;
     margin-top: 20px;
@@ -526,12 +528,11 @@ li {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .footer-adr li + li{ 
+  .footer__list li + li{ 
     margin-top: 9px;
   }
 
-  .footer-nav-mail:hover, .footer-nav-tel:hover, .footer-adr:hover,
-  .footer-nav-mail:focus, .footer-nav-tel:focus, .footer-adr:focus {
+  .footer__item:hover, .footer__item:focus {
     color: var(--accent-color);
   }
 
@@ -543,12 +544,12 @@ li {
     display: flex;
   }
 
-  .footer-link{
+  .footer__blok{
     margin-left: 70px;
     margin-top: 12px;
   }
 
-  .footer-link > p, .subscription > label {
+  .footer__blok > p, .subscription > label {
     margin-bottom: 20px;
 
     font-weight: 700;
@@ -559,11 +560,11 @@ li {
     color: var(--second-text-color);
   }
 
-  .footer-link > .block-icon{
+  .footer__blok > .block-socials{
     margin-left: 0;
   }
 
-  .footer-link > .block-icon > .icon {
+  .footer__blok > .block-socials > .block-socials__icon {
     background-color: var(--icon-bacckground-2);
     fill: var(--second-text-color);
 
@@ -571,8 +572,8 @@ li {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .footer-link > .block-icon > .icon:hover,
-  .footer-link > .block-icon > .icon:focus{
+  .footer__blok > .block-socials > .block-socials__icon:hover,
+  .footer__blok > .block-socials > .block-socials__icon:focus{
     background-color: var(--accent-color);
     fill: var(--second-text-color);
   }
@@ -585,12 +586,12 @@ li {
   
 }
 
-.subscription-icon{
+.subscription__blok{
   display: flex;
 
 }
 
-.form-subscription{
+.subscription__form{
   padding-left: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -602,7 +603,7 @@ li {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 }
-.subscription-button{
+.subscription__button{
   
   position: relative;
   cursor: pointer;
@@ -631,7 +632,12 @@ li {
 
 }
 
-.footer-send {
+.subscription__button:hover, .subscription__button:focus{
+  background: var(--button-background);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.subscription__icon {
   position: absolute;
   top: 0;
   right: 0;
@@ -639,30 +645,28 @@ li {
   margin-right: 28px;
   margin-top: 12px;
 
-
-
   fill: #FFFFFF;
 }
 
   /* --------main portfolio-------- */
 
-  .container-but{
+  .section-portfolio__button-list{
     display: flex;
     justify-content: center;
 
     margin-bottom: 50px;
   }
 
-  .container-but .item +.item{
+  .section-portfolio__button-list li + li{
     margin-left: 8px;
   }
 
-  .flex-container{
+  .section-portfolio__list{
     display: flex;
     flex-wrap: wrap;
   }
 
-  .flex-container  .item{
+  .section-portfolio__list  .section-portfolio__item{
     width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
@@ -671,15 +675,15 @@ li {
   }
 
 
-  .flex-container .item:nth-child(3n) {
+  .section-portfolio__list .section-portfolio__item:nth-child(3n) {
     margin-right: 0;
   } 
 
-  .flex-container .item:nth-last-child(-n + 3) {
+  .section-portfolio__list .section-portfolio__item:nth-last-child(-n + 3) {
     margin-bottom: 0;
   } 
 
-  .portfolio{
+  .section-portfolio{
     padding-top: 94px;
     padding-bottom: 94px;
 
@@ -687,7 +691,7 @@ li {
   }
 
 
-  .headline {
+  .section-portfolio__headline {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -696,18 +700,14 @@ li {
   
   }
 
-  .flex-container > li > .item:hover
-  .flex-container > li > .item:focus{
+  .section-portfolio__list > li > .section-portfolio__item:hover
+  .section-portfolio__list > li > .section-portfolio__item:focus{
     cursor: pointer;
     
   }
 
 
-  a  {
-    text-decoration: none;
-  }
-
-  .quote{
+  .section-portfolio__quote{
     padding-top: 4px;
 
     font-size: 16px;
@@ -717,66 +717,19 @@ li {
     color: var(--title-text-color);
   }
 
-  .flex-container  .item:hover, .flex-container  .item:focus {
+  .section-portfolio__list  .section-portfolio__item:hover, .section-portfolio__list  .section-portfolio__item:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 
 
-  .link-text {
+  .section-portfolio__text {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 24px;
   }
-
-  /* Позиційні елементи */
-
-  .box{
-    position: relative;
-    overflow: hidden;
-
-
-  }
-
-
-  .box-overlay > p{
-    width: 322px;
-    height: 160px;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    font-size: 18px;
-    line-height: 1.56;   
-    letter-spacing: 0.03em;
-    
-    color: var(--second-text-color);
-  }
-
-  .box-overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    background: rgba(33, 150, 243, 0.9);
-
-    transform: translateY(101%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  }
-
-  .item:hover .box-overlay, .item:focus .box-overlay,
-  .item:hover .box::before, .item:focus .box::before {
-    transform: translateY(0);
-  }
-
-
     /* Кнопки на сторінці Портфоліо */
 
-    .buttons {
+    .section-portfolio__button {
       cursor: pointer;
       background: var(--third-background);
       border-radius: 4px;
@@ -795,32 +748,80 @@ li {
       background 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   
-    .buttons:hover, .buttons:focus{
+    .section-portfolio__button:hover, .section-portfolio__button:focus{
       background: var(--accent-color);
       color: var(--second-text-color);
       box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     }
 
   
-    .one {
+    .section-portfolio__button--1 {
       padding: 6px 25px;
     }
   
-    .two {
+    .section-portfolio__button--2 {
       padding: 6px 22px;
     }
   
-    .three {
+    .section-portfolio__button--3 {
       padding: 6px 22px;
     }
   
-    .four {
+    .section-portfolio__button--4 {
       padding: 6px 22px;
     }
   
-    .five {
+    .section-portfolio__button--5 {
       padding: 6px 22px;
     }
+
+  /* Позиційні елементи */
+
+  .section-portfolio__box{
+    position: relative;
+    overflow: hidden;
+
+
+  }
+
+
+  .section-portfolio--overlay > p{
+    width: 322px;
+    height: 160px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 18px;
+    line-height: 1.56;   
+    letter-spacing: 0.03em;
+    
+    color: var(--second-text-color);
+  }
+
+  .section-portfolio--overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(101%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  }
+
+  .section-portfolio__item:hover .section-portfolio--overlay, .section-portfolio__item:focus .section-portfolio--overlay,
+  .section-portfolio__item:hover .section-portfolio__box::before, .section-portfolio__item:focus .section-portfolio__box::before {
+    transform: translateY(0);
+  }
+
+
+
 
 /* ----------------------Модальне вікно-------------------------------- */
 
@@ -870,7 +871,7 @@ li {
 
 /* кнопка закрити модальне вікно */
 
-.modal-but{
+.modal__button-closed{
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -889,11 +890,11 @@ li {
   border-radius: 50%;
 }
 
-.modal-but > svg {
+.modal__button-closed > svg {
   height: 11px;
 }
 
-.modal-but:focus, .modal-but:hover{
+.modal__button-closed:focus, .modal__button-closed:hover{
   fill: #2196F3;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -905,7 +906,7 @@ li {
   margin: 40px;
 }
 
-.form-field, .form-comment{
+.form__field, .form__comment {
   display: flex;
   flex-direction: column;
 
@@ -919,7 +920,7 @@ li {
   color: var(--title-text-color);
 }
 
-.form-field input{
+.form__field input{
   margin: 0;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -936,7 +937,7 @@ li {
 
 
 
-.comment{
+.form__textarea{
 
   padding-top: 12px;
   padding-bottom: 12px;
@@ -959,15 +960,15 @@ li {
 
 
 
-.comment::placeholder{
+.form__textarea::placeholder{
   color: var(--text-form-placeholder);
 }
 
-.form-field label,   .form-comment label{
+.form__label {
   margin-bottom: 4px;
 }
 
-.form-checkbox{
+.form__checkbox{
   display: flex;
   margin-top: 20px;
   margin-bottom: 30px;
@@ -980,7 +981,7 @@ li {
   color: var(--title-text-color);
 }
 
-.form-field input::placeholder{
+.form__field input::placeholder{
 
   font-size: 12px;
   line-height: 1.17;
@@ -989,7 +990,7 @@ li {
   color: var(--text-form-placeholder);
 }
 
-.form-title{
+.form__title{
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
@@ -1003,7 +1004,7 @@ li {
   flex-direction: column;
 }
 
-.form-checkbox a{
+.form__checkbox a{
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -1014,9 +1015,9 @@ li {
 
 }
 
-.form-field:focus input, .form-field:hover input,
- .form-field:active input, .form-field:hover svg,
- .form-comment:focus textarea, .form-comment:hover textarea  {
+.form__field:focus input, .form__field:hover input,
+ .form__field:active input, .form__field:hover svg,
+ .form__comment:focus textarea, .form__comment:hover textarea  {
   border-color: var(--form-second-color);
   fill:var(--accent-color); 
   cursor: pointer;
@@ -1024,7 +1025,7 @@ li {
   fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-form{
+.form__button--submit{
   
   cursor: pointer;
   width: 200px;
@@ -1046,12 +1047,12 @@ li {
 
 }
 
-.button-form:focus, .button-form:hover{
+.form__button--submit:focus, .form__button--submit:hover{
   background: #188CE8;
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-button{
+.form__button{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1059,16 +1060,16 @@ li {
 }
 
 
-.form-icon {
+.form__icon {
   position: relative;
   flex-direction: column;
 }
 
-.form-icon input{
+.form__icon input{
   width: 448px;
 }
 
-.form-icon svg {
+.form__icon svg {
   position: absolute;
   top: 50%;
   left: 0;
@@ -1090,18 +1091,18 @@ input:focus-visible, textarea:focus-visible {
 
 /* ховаемо чекбокс */
 
-.checkbox{
+.form__checkbox{
   appearance: none;
   
 }
 
-.form-checkbox > label{
+.form__checkbox > label{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.icon-span{
+.form__checkbox-icon{
   display: inline-block;
   position: relative;
   height: 15px;
@@ -1114,7 +1115,7 @@ input:focus-visible, textarea:focus-visible {
 }
 
 
-.icons-checkbox{
+.form__checkbox-thumb{
   position: absolute;
   top: 50%;
   right: 50%;
@@ -1126,7 +1127,7 @@ input:focus-visible, textarea:focus-visible {
 
 
 
-.checkbox:checked + .icon-span{
+.form__checkbox:checked + .form__checkbox-icon{
   background: var(--accent-color);
   border-color: var(--accent-color);
   background-origin: border-box;
