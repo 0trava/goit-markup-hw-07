@@ -6,8 +6,11 @@
 
     .block-socials__icon +.block-socials__icon{
         margin-left: 10px
+
+
       }
 }
+
 
   .block-socials__icon{
     @extend %flex-center;
@@ -24,5 +27,9 @@
     &:focus{
         background-color: $accent-color;
         fill: $second-text-color;
+      }
+
+      > svg {
+        height: 20px
       }
   }

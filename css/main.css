@@ -382,6 +382,9 @@ header {
   background-color: #2196F3;
   fill: #FFFFFF;
 }
+.block-socials__icon > svg {
+  height: 20px;
+}
 
 /* Постійні клієнти */
 .section-client {
@@ -1023,6 +1026,6 @@ input:focus-visible, textarea:focus-visible {
 .section-portfolio__button--4 {
   padding: 6px 22px;
 }
-.section-portfolio__button --5 {
+.section-portfolio__button--5 {
   padding: 6px 22px;
 }/*# sourceMappingURL=main.css.map */
